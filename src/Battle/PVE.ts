@@ -18,14 +18,12 @@ export default class PVE extends Battle {
     let winner = 1;
 
     monsters.forEach((monster) => {
-      while (player.lifePoints >= 0 && monster.lifePoints >= 0) {
-        player.attack(monster);
-        monster.attack(player);
-      }
-      if (player.lifePoints === -1) {
-        winner = -1;
-      }
+      player.attack(monster);
+      monster.attack(player);
     });
+    if (player.lifePoints === -1) {
+      winner = -1;
+    }
 
     return winner;
   }
