@@ -4,16 +4,16 @@ import Battle from './Battle';
 type MonstersTypes = SimpleFighter[] | Fighter[];
 
 export default class PVE extends Battle {
-  private _player: Fighter;
+  public player: Fighter;
   private _monsters: MonstersTypes;
   constructor(player: Fighter, monsters: MonstersTypes) {
     super(player);
-    this._player = player;
+    this.player = player;
     this._monsters = monsters;
   }
 
-  fight(): number {
-    const player = this._player;
+  public fight(): number {
+    const { player } = this;
     const monsters = this._monsters;
 
     monsters.forEach((monster) => {

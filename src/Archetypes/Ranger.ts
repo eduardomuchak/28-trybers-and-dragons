@@ -11,11 +11,11 @@ export default class Ranger extends Archetype {
     Ranger._counter += 1;
   }
 
-  get energyType(): EnergyType {
+  public get energyType(): EnergyType {
     return this._energyType;
   }
 
-  static createdArchetypeInstances(): number {
+  public static createdArchetypeInstances(): number {
     return Ranger._counter;
   }
 }

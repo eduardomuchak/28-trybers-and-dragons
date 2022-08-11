@@ -8,17 +8,9 @@ const player1 = new Character('Eduardo');
 const player2 = new Character('Saul Goodman');
 const player3 = new Character('Ron Swanson');
 
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
-// player1.levelUp();
+const randomLevelsUpNumber = getRandomInt(3, 15);
 
-for (let index = 0; index < getRandomInt(3, 8); index += 1) {
+for (let index = 0; index < randomLevelsUpNumber; index += 1) {
   player1.levelUp();
 }
 
